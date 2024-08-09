@@ -1,0 +1,28 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Home",
+      "icon": "menu-icon tf-icons bx bx-home-circle",
+      "slug": "pages-home"
+    },
+    {
+      "url": "/roles-permissions",
+      "name": "Roles & Permissions",
+      "icon": "menu-icon tf-icons bx bx-shield",
+      "slug": "roles-permissions.index"
+    },
+    {
+      "url": "/users",
+      "name": "User Management",
+      "icon": "menu-icon tf-icons bx bx-user",
+      "slug": "users.index"
+    },
+    {
+      "url": "/settings",
+      "name": "Settings",
+      "icon": "menu-icon tf-icons bx bx-cog",
+      "slug": "pages-settings"
+    }
+  ]
+}
