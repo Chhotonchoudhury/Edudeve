@@ -11,6 +11,10 @@
 <!-- BEGIN: Theme JS-->
 <script src="{{ asset(mix('assets/js/main.js')) }}"></script>
 
+    <!-- Vendors JS -->
+    <script src="{{ asset(mix('assets/vendor/libs/toastr/toastr.js'))}}"></script>
+    <script src="{{ asset(mix('assets/vendor/libs/select2/select2.js')) }}"></script>
+
 <!-- END: Theme JS-->
 <!-- Pricing Modal JS-->
 @stack('pricing-script')

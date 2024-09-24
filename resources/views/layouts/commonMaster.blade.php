@@ -22,7 +22,7 @@ $contentLayout = (isset($container) ? (($container === 'container-xxl') ? "layou
   <!-- Canonical SEO -->
   <link rel="canonical" href="{{ config('variables.productPage') ? config('variables.productPage') : '' }}">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon1.png') }}" />
+  <link rel="icon" type="image/x-icon" href="{{ config('app.favicon') }}" />
 
   <!-- Include Styles -->
   <!-- $isFront is used to append the front layout styles only on the front layout otherwise the variable will be blank -->
@@ -73,6 +73,48 @@ $contentLayout = (isset($container) ? (($container === 'container-xxl') ? "layou
 }
 
   </script>
+
+  @if(session('success'))
+  <script>
+      toastr.success("{{ session('success') }}", 'Success', {
+          closeButton: true,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          timeOut: 5000,
+          extendedTimeOut: 1000,
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut"
+      });
+  </script>
+  @endif
+
+  @if(session('warning'))
+  <script>
+      toastr.warning("{{ session('warning') }}", 'Warning', {
+          closeButton: true,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          timeOut: 5000,
+          extendedTimeOut: 1000,
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut"
+      });
+  </script>
+  @endif
+
+  @if(session('error'))
+  <script>
+      toastr.error("{{ session('error') }}", 'Error', {
+          closeButton: true,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          timeOut: 5000,
+          extendedTimeOut: 1000,
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut"
+      });
+  </script>
+  @endif
   @yield('scripts')
 
 </body>

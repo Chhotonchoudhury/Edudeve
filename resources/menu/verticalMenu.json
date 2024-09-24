@@ -7,8 +7,32 @@
       "slug": "pages-home"
     },
     {
+      "url": "/leads",
+      "name": "Leads",
+      "icon": "menu-icon tf-icons bx bx-user-pin",
+      "slug": "leads.index"
+    },
+    {
+      "url": "/universities",
+      "name": "Universities",
+      "icon": "menu-icon tf-icons bx bx-building-house",
+      "slug": "university.index"
+    },
+    {
+      "url": "/courses",
+      "name": "Courses",
+      "icon": "menu-icon tf-icons bx bx-book",
+      "slug": "course.index"
+    },
+    {
+      "url": "/student",
+      "name": "Students",
+      "icon": "menu-icon tf-icons bx bx-group",
+      "slug": "student.index"
+    },
+    {
       "url": "/roles-permissions",
-      "name": "Roles & Permissions",
+      "name": "Roles",
       "icon": "menu-icon tf-icons bx bx-shield",
       "slug": "roles-permissions.index"
     },
@@ -22,7 +46,7 @@
       "url": "/settings",
       "name": "Settings",
       "icon": "menu-icon tf-icons bx bx-cog",
-      "slug": "pages-settings"
+      "slug": "settings"
     }
   ]
 }

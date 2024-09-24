@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="{{ asset(mix('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')) }}" />
 <link rel="stylesheet" href="{{ asset(mix('assets/vendor/libs/typeahead-js/typeahead.css')) }}" />
 
+<link rel="stylesheet" href="{{ asset(mix('assets/vendor/libs/toastr/toastr.css')) }}" />
+<link rel="stylesheet" href="{{ asset(mix('assets/vendor/libs/select2/select2.css')) }}" /
+
+<link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/pages/page-profile.css'))}}" />>
+
 <!-- Vendor Styles -->
 @yield('vendor-style')
 

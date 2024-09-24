@@ -5,95 +5,79 @@
 @section('vendor-style')
 <link rel="stylesheet" href="{{ asset('assets/vendor/libs/@form-validation/umd/styles/index.min.css') }}" />
 <style>
-  .dt-button.add-new {
-    font-size: 0.75rem; /* Smaller font size */
-    padding: 0.25rem 0.5rem; /* Reduce padding */
-    height: 32px; /* Smaller height */
-    display: flex;
-    align-items: center;
-}
+      .dt-button.add-new {
+        font-size: 0.75rem; /* Smaller font size */
+        padding: 0.25rem 0.5rem; /* Reduce padding */
+        height: 32px; /* Smaller height */
+        display: flex;
+        align-items: center;
+      }
 
-    .header-actions {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Align to the right */
-    gap: 0.5rem; /* Add space between the search form and button */
-}
+        .header-actions {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Align to the right */
+        gap: 0.5rem; /* Add space between the search form and button */
+      }
 
-.search-form .input-group {
-    margin-bottom: 0;
-}
+    .search-form .input-group {
+        margin-bottom: 0;
+      }
 
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.25rem 1rem;
-}
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.25rem 1rem;
+      }
 
-.card-title {
-    font-size: 0.985rem;
-    margin-bottom: 0;
-}
+    .card-title {
+        font-size: 0.985rem;
+        margin-bottom: 0;
+      }
 
-.input-group .form-control,
-.input-group .btn {
-    font-size: 0.875rem;
-    padding: 0.25rem 0.5rem;
-}
+    .input-group .form-control,
+    .input-group .btn {
+        font-size: 0.875rem;
+        padding: 0.25rem 0.5rem;
+      }
 
-.card {
-    margin-bottom: 0;
-}
+    .card {
+        margin-bottom: 0;
+      }
 
-.card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: #f8f9fa;
-    border-top: 1px solid #dee2e6;
-}
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+      }
 
-.footer-info {
-    font-size: 0.900rem;
-    color: #333333; /* Darker text color for better readability */
-    background-color: #f0f0f0; /* Light grey background */
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.25rem;
-    display: flex;
-    align-items: center;
-    border: 1px solid #d1d1d1; /* Light border to give button-like appearance */
-}
+    .footer-info {
+        font-size: 0.900rem;
+        color: #333333; /* Darker text color for better readability */
+        background-color: #f0f0f0; /* Light grey background */
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid #d1d1d1; /* Light border to give button-like appearance */
+      }
 
-.pagination {
-    margin-bottom: 0;
-}
+    .pagination {
+        margin-bottom: 0;
+      }
 
 </style>
 @endsection
 
 @section('content')
 <!-- Success Message -->
-@if(session('success'))
-<div class="alert alert-solid-success alert-dismissible d-flex align-items-center" role="alert">
-    <i class="bx bx-xs bx-check-circle me-2"></i>
-    {{ session('success') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
-
-@if(session('error'))
-<div class="alert alert-solid-danger alert-dismissible d-flex align-items-center" role="alert">
-    <i class="bx bx-xs bx-x-circle me-2"></i>
-    {{ session('error') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-@endif
-
 
 <!-- Table -->
-<div class="row g-4 mb-4">
+  <div class="row g-4 mb-2">
     <div class="col-sm-6 col-xl-3">
       <div class="card">
         <div class="card-body">
@@ -245,7 +229,7 @@
             </tr>
             @endforeach
         </tbody>
-    </table>
+      </table>
     
     </div>
     <div class="card-footer" style="padding: 1%">
@@ -720,6 +704,49 @@
   
 
   </script>
+
+
+@if(session('success'))
+<script>
+    toastr.success("{{ session('success') }}", 'Success', {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-top-right",
+        timeOut: 5000,
+        extendedTimeOut: 1000,
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+    });
+</script>
+@endif
+
+@if(session('warning'))
+<script>
+    toastr.warning("{{ session('warning') }}", 'Warning', {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-top-right",
+        timeOut: 5000,
+        extendedTimeOut: 1000,
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+    });
+</script>
+@endif
+
+@if(session('error'))
+<script>
+    toastr.error("{{ session('error') }}", 'Error', {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-top-right",
+        timeOut: 5000,
+        extendedTimeOut: 1000,
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+    });
+</script>
+@endif
   
 
 @endsection
